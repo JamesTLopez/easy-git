@@ -1,38 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap");
+html,
+body,
+#root,
 .App {
-  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  position: absolute;
+  font-family: 'PT Serif Caption', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html .navbar-container,
+body .navbar-container,
+#root .navbar-container,
+.App .navbar-container {
+  position: relative;
+  height: 120px;
+  min-height: 100px;
+  max-height: 135px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html .navbar-container .navbar-content,
+body .navbar-container .navbar-content,
+#root .navbar-container .navbar-content,
+.App .navbar-container .navbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #24292e;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+html .navbar-container .navbar-content .logo,
+body .navbar-container .navbar-content .logo,
+#root .navbar-container .navbar-content .logo,
+.App .navbar-container .navbar-content .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  width: 300px;
+  height: 100%;
+}
+
+html .navbar-container .navbar-content .logo h1,
+body .navbar-container .navbar-content .logo h1,
+#root .navbar-container .navbar-content .logo h1,
+.App .navbar-container .navbar-content .logo h1 {
+  padding: 0;
+  margin: 0;
+  width: 150px;
+}
+
+html .navbar-container .navbar-content .nav-area,
+body .navbar-container .navbar-content .nav-area,
+#root .navbar-container .navbar-content .nav-area,
+.App .navbar-container .navbar-content .nav-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+html .navbar-container .navbar-content .nav-area nav ul,
+body .navbar-container .navbar-content .nav-area nav ul,
+#root .navbar-container .navbar-content .nav-area nav ul,
+.App .navbar-container .navbar-content .nav-area nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  margin-right: 50px;
+}
+
+html .navbar-container .navbar-content .nav-area nav ul li,
+body .navbar-container .navbar-content .nav-area nav ul li,
+#root .navbar-container .navbar-content .nav-area nav ul li,
+.App .navbar-container .navbar-content .nav-area nav ul li {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+html .navbar-container .navbar-content .nav-area nav ul li a,
+body .navbar-container .navbar-content .nav-area nav ul li a,
+#root .navbar-container .navbar-content .nav-area nav ul li a,
+.App .navbar-container .navbar-content .nav-area nav ul li a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+html .search-container,
+body .search-container,
+#root .search-container,
+.App .search-container {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #FDFAF5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html .search-container .search-content,
+body .search-container .search-content,
+#root .search-container .search-content,
+.App .search-container .search-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
 }
+
+html .search-container .search-content .area,
+body .search-container .search-content .area,
+#root .search-container .search-content .area,
+.App .search-container .search-content .area {
+  position: relative;
+  top: 20%;
+}
+
+html .search-container .search-content .area .title,
+body .search-container .search-content .area .title,
+#root .search-container .search-content .area .title,
+.App .search-container .search-content .area .title {
+  position: relative;
+  width: 600px;
+}
+
+html .search-container .search-content .area .title .logo,
+body .search-container .search-content .area .title .logo,
+#root .search-container .search-content .area .title .logo,
+.App .search-container .search-content .area .title .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .search-container .search-content .area .title .logo p,
+body .search-container .search-content .area .title .logo p,
+#root .search-container .search-content .area .title .logo p,
+.App .search-container .search-content .area .title .logo p {
+  margin: 0;
+  font-size: 60px;
+}
+
+html .search-container .search-content .area .title .description,
+body .search-container .search-content .area .title .description,
+#root .search-container .search-content .area .title .description,
+.App .search-container .search-content .area .title .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .search-container .search-content .area .title .description p,
+body .search-container .search-content .area .title .description p,
+#root .search-container .search-content .area .title .description p,
+.App .search-container .search-content .area .title .description p {
+  font-size: 20px;
+}
+
+html .search-container .search-content .area .search-form,
+body .search-container .search-content .area .search-form,
+#root .search-container .search-content .area .search-form,
+.App .search-container .search-content .area .search-form {
+  position: relative;
+  top: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .search-container .search-content .area .search-form form,
+body .search-container .search-content .area .search-form form,
+#root .search-container .search-content .area .search-form form,
+.App .search-container .search-content .area .search-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+html .search-container .search-content .area .search-form form input,
+body .search-container .search-content .area .search-form form input,
+#root .search-container .search-content .area .search-form form input,
+.App .search-container .search-content .area .search-form form input {
+  width: 80%;
+  height: 30px;
+}
+/*# sourceMappingURL=App.css.map */
