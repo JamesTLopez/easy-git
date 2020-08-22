@@ -1,6 +1,6 @@
 import React from "react";
 
-const search: React.FC = () => {
+const Search: React.FC = () => {
   return (
     <div className="search-container">
       <div className="search-content">
@@ -24,4 +24,4 @@ const search: React.FC = () => {
   );
 };
 
-export default search;
+export default Search;

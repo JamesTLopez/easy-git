@@ -16,7 +16,7 @@ body .navbar-container,
 #root .navbar-container,
 .App .navbar-container {
   position: relative;
-  height: 120px;
+  height: 100px;
   min-height: 100px;
   max-height: 135px;
 }
@@ -116,6 +116,32 @@ body .navbar-container .navbar-content .nav-area nav ul li a,
   color: white;
 }
 
+html .footer-container,
+body .footer-container,
+#root .footer-container,
+.App .footer-container {
+  position: relative;
+  height: 100px;
+  min-height: 100px;
+  max-height: 135px;
+}
+
+html .footer-container .footer-content,
+body .footer-container .footer-content,
+#root .footer-container .footer-content,
+.App .footer-container .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #24292e;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
 html .search-container,
 body .search-container,
 #root .search-container,
@@ -147,7 +173,8 @@ body .search-container .search-content .area,
 #root .search-container .search-content .area,
 .App .search-container .search-content .area {
   position: relative;
-  top: 20%;
+  top: 35%;
+  height: 500px;
 }
 
 html .search-container .search-content .area .title,
@@ -231,5 +258,17 @@ body .search-container .search-content .area .search-form form input,
 .App .search-container .search-content .area .search-form form input {
   width: 80%;
   height: 30px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: solid #f1eadd;
+  outline: none;
+}
+
+html .profile-container,
+body .profile-container,
+#root .profile-container,
+.App .profile-container {
+  position: relative;
+  height: 100%;
 }
 /*# sourceMappingURL=App.css.map */
