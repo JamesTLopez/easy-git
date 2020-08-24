@@ -62,18 +62,21 @@ const Profile: React.FC = () => {
                         <p>{UserData?.login}</p>
                     </div>
                     <div className="user-info">
+                        <div className="list">
+                            <table>
+                                <tr>
+                                    <th>Login:</th>
+                                    <td>{UserData?.login}</td>
+                                </tr>
+                            </table>
+                        </div>
 
                     </div>
 
                 </div>
                 <div className="profile-repos">
                     <div className="repository-list">
-                        <Card name="Test"/>
-                        <Card name="Test"/>
-                        <Card name="Test"/>
-                        <Card name="Test"/>
-                        <Card name="Test"/>
-                        <Card name="Test"/>
+                        
 
                         
 

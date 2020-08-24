@@ -267,13 +267,18 @@ html .profile-container,
 body .profile-container,
 #root .profile-container,
 .App .profile-container {
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 100%;
 }
 
 html .profile-container .profile-content,
 body .profile-container .profile-content,
 #root .profile-container .profile-content,
 .App .profile-container .profile-content {
+  width: 100%;
   margin: 100px;
   margin-bottom: 0px;
   height: 100%;
@@ -370,8 +375,7 @@ body .profile-container .profile-content .profile-repos .repository-list,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  height: 80%;
-  margin: 20px;
+  height: inherit;
 }
 
 html .card,
