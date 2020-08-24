@@ -271,4 +271,72 @@ body .profile-container,
   position: relative;
   height: 100%;
 }
+
+html .profile-container .profile-content,
+body .profile-container .profile-content,
+#root .profile-container .profile-content,
+.App .profile-container .profile-content {
+  position: relative;
+  padding: 100px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html .profile-container .profile-content .profile-title,
+body .profile-container .profile-content .profile-title,
+#root .profile-container .profile-content .profile-title,
+.App .profile-container .profile-content .profile-title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .profile-container .profile-content .profile-title .user-picture,
+body .profile-container .profile-content .profile-title .user-picture,
+#root .profile-container .profile-content .profile-title .user-picture,
+.App .profile-container .profile-content .profile-title .user-picture {
+  position: relative;
+  margin: 20px;
+}
+
+html .profile-container .profile-content .profile-title .user-picture img,
+body .profile-container .profile-content .profile-title .user-picture img,
+#root .profile-container .profile-content .profile-title .user-picture img,
+.App .profile-container .profile-content .profile-title .user-picture img {
+  border-radius: 100px;
+  height: 150px;
+  width: 150px;
+}
+
+html .profile-container .profile-content .profile-title .user-picture p,
+body .profile-container .profile-content .profile-title .user-picture p,
+#root .profile-container .profile-content .profile-title .user-picture p,
+.App .profile-container .profile-content .profile-title .user-picture p {
+  text-align: center;
+  font-size: 20px;
+}
+
+html .profile-container .profile-content .profile-title .user-info,
+body .profile-container .profile-content .profile-title .user-info,
+#root .profile-container .profile-content .profile-title .user-info,
+.App .profile-container .profile-content .profile-title .user-info {
+  position: relative;
+  border: solid 1px #afafaf73;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  height: 220px;
+  width: 400px;
+}
 /*# sourceMappingURL=App.css.map */

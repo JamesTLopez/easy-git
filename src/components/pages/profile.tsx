@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 
 export interface User {
-    login:string;
+    login:boolean;
     id:number;
     node_id:string;
     avatar_url:string;
@@ -37,15 +37,14 @@ export interface User {
 
 const Profile: React.FC = () => {
 
-    const [User,setUser] = useState<User[]>([])
+    const [UserData,setUserData] = useState<User>()
 
     useEffect(() => {
 
         fetch('https://api.github.com/users/example')
         .then(res => res.json())
         .then(data => {
-            setUser(data)
-
+            setUserData(data)
             console.log("i ran once")
         })
 
@@ -53,11 +52,28 @@ const Profile: React.FC = () => {
 
     },[])
 
+    let click = () =>{
+        console.log(UserData)
+        console.log(UserData?.login)
+        
+    }
 
     return (
         <div className="profile-container">
             <div className="profile-content">
-               
+                <div className="profile-title">
+                    <div className="user-picture">
+                        <img src={UserData?.avatar_url} alt="Alt"></img>
+                        <p>{UserData?.login}</p>
+                    </div>
+                    <div className="user-info">
+
+                    </div>
+
+                </div>
+                <div className="profile-repos">
+
+                </div>               
             </div>
         </div>
     )
