@@ -1,6 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
+
+
+
 
 const Search: React.FC = () => {
+
+  
+  const [userUrl,setUrl] = useState("");
+  const handleSubmit = () =>{
+    
+  }
+
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  }
+
   return (
     <div className="search-container">
       <div className="search-content">
@@ -14,8 +28,8 @@ const Search: React.FC = () => {
             </div>
           </div>
           <div className="search-form">
-              <form>
-                <input type="text" placeholder="Search.."/>
+              <form onSubmit={handleSubmit}>
+                <input type="text" value={userUrl} onChange={handleChange} placeholder="Search.."/>
               </form>
           </div>
         </div>

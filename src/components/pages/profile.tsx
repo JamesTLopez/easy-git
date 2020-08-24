@@ -42,7 +42,7 @@ const Profile: React.FC = () => {
 
     useEffect(() => {
 
-        fetch('https://api.github.com/users/example')
+        fetch('https://api.github.com/users/JamesTLopez')
         .then(res => res.json())
         .then(data => {
             setUserData(data)
@@ -63,12 +63,16 @@ const Profile: React.FC = () => {
                     </div>
                     <div className="user-info">
                         <div className="list">
-                            <table>
+                            {/* <table>
                                 <tr>
                                     <th>Login:</th>
                                     <td>{UserData?.login}</td>
                                 </tr>
-                            </table>
+                                <tr>
+                                    <th>Login:</th>
+                                    <td>{UserData?.login}</td>
+                                </tr>
+                            </table> */}
                         </div>
 
                     </div>
