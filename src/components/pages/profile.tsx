@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react'
+import Card from '../layouts/card'
 
 export interface User {
     login:boolean;
@@ -48,15 +49,9 @@ const Profile: React.FC = () => {
             console.log("i ran once")
         })
 
-        
-
     },[])
 
-    let click = () =>{
-        console.log(UserData)
-        console.log(UserData?.login)
-        
-    }
+
 
     return (
         <div className="profile-container">
@@ -72,7 +67,17 @@ const Profile: React.FC = () => {
 
                 </div>
                 <div className="profile-repos">
+                    <div className="repository-list">
+                        <Card name="Test"/>
+                        <Card name="Test"/>
+                        <Card name="Test"/>
+                        <Card name="Test"/>
+                        <Card name="Test"/>
+                        <Card name="Test"/>
 
+                        
+
+                    </div>
                 </div>               
             </div>
         </div>

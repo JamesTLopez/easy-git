@@ -1,9 +1,13 @@
 import React from 'react'
 
-function card() {
+interface Props{
+    name:string;
+}
+
+const card: React.FC<Props> = ({name}) => {
     return (
-        <div>
-            
+        <div className="card">
+            <p>{name}</p>
         </div>
     )
 }

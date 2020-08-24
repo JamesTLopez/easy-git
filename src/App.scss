@@ -67,7 +67,7 @@ body,
 
     //FOOTER NAV COMPONENT
     .footer-container{
-        position: relative;
+     
         height: 100px;
         min-height: 100px;
         max-height: 135px;
@@ -148,18 +148,21 @@ body,
 
     //PROFILE PAGE
     .profile-container{
-        position: relative;
+
         height:100%;
         .profile-content{
-            position: relative;
-            padding:100px;
+          
+            margin:100px;
+            margin-bottom:0px;
             height: 100%;
             display: flex;
             flex-direction: column;
             .profile-title{
+                flex:1;
                 position: relative;
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 .user-picture{
                     position: relative;
                     margin:20px;
@@ -189,10 +192,37 @@ body,
                 }
             }
             .profile-repos{
-                
+                display: flex;
+                align-items: center;
+                flex: 2;
+                height: 100%;
+                .repository-list{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: 80%;
+                    margin:20px;
+                    
+                }
+
             }
         }
 
+    }
+
+    //CARD LAYOUT COMPONENT
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:15px;
+        border:solid 1px #8080804b ;
+        border-radius: 5px;
+        width: 250px;
+        height: 100px;
+        p{
+            font-size: 20px;
+        }
     }
 
 
