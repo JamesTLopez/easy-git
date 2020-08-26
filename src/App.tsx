@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React,{useReducer} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Nav from "./components/layouts/navbar";
@@ -8,26 +8,31 @@ import Profile from "./components/pages/Profile";
 
 import "./App.css";
 
-import StoreProvider from "./context/UserContext";
-import {Store} from "./context/UserContext";
+import UserProvider,{initState,reducer} from "./context";
 
-function App(): JSX.Element {
+
+
+const App: React.FC = () => {
+
+  const [state,dispatch] = useReducer(reducer,initState);
 
   return (
-
-    <StoreProvider>
-
+    <UserProvider.Provider value={{state,dispatch}}>
       <Router>
         <div className="App">
           <Nav />
           <Switch>
-            <Route exact path={`/`} component={Search}></Route>
-            <Route path={`/profile`} component={Profile}></Route>
+            <Route exact path={`/`}>
+              <Search/>
+            </Route>
+            <Route path={`/profile`}>
+              <Profile />
+            </Route>
           </Switch>
           <Footer />
         </div>
       </Router>
-    </StoreProvider>
+    </UserProvider.Provider>
   );
 }
 

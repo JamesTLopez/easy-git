@@ -1,18 +1,27 @@
-import React, {useState} from "react";
+import React,{useContext} from "react";
+import UserProvider from '../../context'
 
 
+const Search: React.FC= (props) => {
+
+const {state, dispatch} = useContext(UserProvider);
 
 
-const Search: React.FC = () => {
-
-  
-  const [userUrl,setUrl] = useState("");
-  const handleSubmit = () =>{
-    
-  }
 
   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
+
+  }
+
+  const updateState = () =>{
+    console.log(state);
+
+  }
+
+  const updateNewState = () =>{
+
+    dispatch({type:'FETCH',payload:'News'});
+
   }
 
   return (
@@ -22,15 +31,18 @@ const Search: React.FC = () => {
           <div className="title">
             <div className="logo">
               <p>EASY-GIT</p>
+         
             </div>
             <div className="description">
               <p>Displays users repository with easy visibility</p>
             </div>
           </div>
           <div className="search-form">
-              <form onSubmit={handleSubmit}>
-                <input type="text" value={userUrl} onChange={handleChange} placeholder="Search.."/>
+              <form >
+                <input type="text"  onChange={handleChange} placeholder="Search.."/>
               </form>
+                <button onClick={updateState}>State Changer Test</button>
+                <button onClick={updateNewState}>State New Test</button>
           </div>
         </div>
       </div>
