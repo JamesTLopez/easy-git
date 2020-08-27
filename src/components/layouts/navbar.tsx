@@ -1,8 +1,23 @@
-import React from "react";
+import React,{useState, useContext}  from "react";
 import { Link } from "react-router-dom";
+import {Isearch} from "../pages/Search"
+import UserProvider from "../../context"
 
 
-const navbar: React.FC = () => {
+const Navbar: React.FC = () => {
+  const [login,setLogin] = useState<Isearch>({login:''});
+  const {state,dispatch} = useContext(UserProvider);
+
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setLogin({login:e.target.value});
+
+  }
+
+
+  const updateNewState = () =>{
+    dispatch({type:'UPDATE',payload:login.login});
+  }
+
 
   return (
     <header className="navbar-container">
@@ -16,7 +31,7 @@ const navbar: React.FC = () => {
               <li>
                 <div className="search-form">
                   <form>
-                    <input type="text" placeholder="Search.." />
+                    <input type="text" onChange={handleChange} placeholder="Search.." />
                   </form>
                 </div>
               </li>
@@ -34,4 +49,4 @@ const navbar: React.FC = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

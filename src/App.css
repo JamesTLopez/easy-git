@@ -116,6 +116,45 @@ body .navbar-container .navbar-content .nav-area nav ul li a,
   color: white;
 }
 
+html .navbar-container .navbar-content .nav-area nav ul li .search-form,
+body .navbar-container .navbar-content .nav-area nav ul li .search-form,
+#root .navbar-container .navbar-content .nav-area nav ul li .search-form,
+.App .navbar-container .navbar-content .nav-area nav ul li .search-form {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .navbar-container .navbar-content .nav-area nav ul li .search-form form,
+body .navbar-container .navbar-content .nav-area nav ul li .search-form form,
+#root .navbar-container .navbar-content .nav-area nav ul li .search-form form,
+.App .navbar-container .navbar-content .nav-area nav ul li .search-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+html .navbar-container .navbar-content .nav-area nav ul li .search-form form input,
+body .navbar-container .navbar-content .nav-area nav ul li .search-form form input,
+#root .navbar-container .navbar-content .nav-area nav ul li .search-form form input,
+.App .navbar-container .navbar-content .nav-area nav ul li .search-form form input {
+  width: 80%;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: solid #f1eadd;
+  outline: none;
+}
+
 html .footer-container,
 body .footer-container,
 #root .footer-container,
@@ -135,10 +174,20 @@ body .footer-container .footer-content,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #24292e;
   padding: 0;
   margin: 0;
   height: 100%;
+}
+
+html .footer-container .footer-content .copyright,
+body .footer-container .footer-content .copyright,
+#root .footer-container .footer-content .copyright,
+.App .footer-container .footer-content .copyright {
+  color: white;
 }
 
 html .search-container,

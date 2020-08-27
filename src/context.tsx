@@ -1,4 +1,4 @@
-import React,{createContext} from 'react'
+import {createContext} from 'react'
 
 export interface User {
 
@@ -48,10 +48,10 @@ export interface userState {
 
 export const reducer = (state:userState,action:Iaction):userState =>{
     switch(action.type){
-        case'FETCH':
+        case'UPDATE':
             console.log(action.payload)
             return{
-                userLogin:'New'
+                userLogin:action.payload
             }
         default:
             return state
@@ -60,7 +60,7 @@ export const reducer = (state:userState,action:Iaction):userState =>{
 
 
 export const initState:userState = {
-    userLogin:"Lawls"
+    userLogin:"JamesTLopez"
 }
 
 

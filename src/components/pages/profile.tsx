@@ -1,16 +1,16 @@
 import React,{useState, useEffect, useContext} from 'react'
 
-import UserProvider, { userState,User } from "../../context"
+import UserProvider, { User } from "../../context"
 
 
 const Profile: React.FC = () => {
-    const {state, dispatch} = useContext(UserProvider);
+    const {state} = useContext(UserProvider);
     const [UserData,setUserData] = useState<User>()
 
 
     useEffect(() => {
 
-        fetch('https://api.github.com/users/JamesTLopez')
+        fetch(`https://api.github.com/users/${state.userLogin}`)
         .then(res => res.json())
         .then(data => {
             setUserData(data)
@@ -34,6 +34,7 @@ const Profile: React.FC = () => {
                     <div className="user-picture">
                         <img src={UserData?.avatar_url} alt="Alt"></img>
                         <p>{UserData?.login}</p>
+                        <p>{state.userLogin}</p>
                         <button onClick={updateState}>State Changer Test</button>
                     </div>
                     <div className="user-info">

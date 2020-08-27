@@ -1,31 +1,33 @@
-import React,{useContext} from "react";
+import React,{useContext, useState} from "react";
 import UserProvider from '../../context'
 
+export interface Isearch { 
+  login?:string;
+}
 
 const Search: React.FC= (props) => {
+const [login,setLogin] = useState<Isearch>({login:''});
+const {dispatch} = useContext(UserProvider);
 
-const {state, dispatch} = useContext(UserProvider);
+const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+  setLogin({login:e.target.value});
 
+}
 
+const sumbitForm = (e:any) =>{
 
-  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
+  dispatch({type:'UPDATE',payload:login.login});
+  e.preventDefault();
 
-  }
+}
 
-  const updateState = () =>{
-    console.log(state);
+const updateNewState = () =>{
+  // dispatch({type:'UPDATE',payload:login.login});
+}
 
-  }
-
-  const updateNewState = () =>{
-
-    dispatch({type:'FETCH',payload:'News'});
-
-  }
 
   return (
-    <div className="search-container">
+    <div className="search-container" >
       <div className="search-content">
         <div className="area">
           <div className="title">
@@ -38,10 +40,11 @@ const {state, dispatch} = useContext(UserProvider);
             </div>
           </div>
           <div className="search-form">
-              <form >
+              <form onSubmit={(e) => sumbitForm(e)}>
                 <input type="text"  onChange={handleChange} placeholder="Search.."/>
+                <button type="submit">Submit</button>
               </form>
-                <button onClick={updateState}>State Changer Test</button>
+      
                 <button onClick={updateNewState}>State New Test</button>
           </div>
         </div>
