@@ -50,15 +50,22 @@ body .navbar-container .navbar-content .logo,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
   width: 300px;
   height: 100%;
 }
 
-html .navbar-container .navbar-content .logo h1,
-body .navbar-container .navbar-content .logo h1,
-#root .navbar-container .navbar-content .logo h1,
-.App .navbar-container .navbar-content .logo h1 {
+html .navbar-container .navbar-content .logo a,
+body .navbar-container .navbar-content .logo a,
+#root .navbar-container .navbar-content .logo a,
+.App .navbar-container .navbar-content .logo a {
+  text-decoration: none;
+  color: white;
+}
+
+html .navbar-container .navbar-content .logo a h1,
+body .navbar-container .navbar-content .logo a h1,
+#root .navbar-container .navbar-content .logo a h1,
+.App .navbar-container .navbar-content .logo a h1 {
   padding: 0;
   margin: 0;
   width: 150px;
@@ -103,6 +110,12 @@ html .navbar-container .navbar-content .nav-area nav ul li,
 body .navbar-container .navbar-content .nav-area nav ul li,
 #root .navbar-container .navbar-content .nav-area nav ul li,
 .App .navbar-container .navbar-content .nav-area nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   font-size: 20px;
   padding: 10px;
@@ -297,6 +310,9 @@ body .search-container .search-content .area .search-form form,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -310,6 +326,18 @@ body .search-container .search-content .area .search-form form input,
   border-radius: 10px;
   border: solid #f1eadd;
   outline: none;
+}
+
+html .search-container .search-content .area .search-form form button,
+body .search-container .search-content .area .search-form form button,
+#root .search-container .search-content .area .search-form form button,
+.App .search-container .search-content .area .search-form form button {
+  margin: 10px;
+  height: 35px;
+  width: 90px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #f7efe4;
 }
 
 html .profile-container,

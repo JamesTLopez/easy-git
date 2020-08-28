@@ -1,29 +1,17 @@
-import React,{useState, useEffect, useContext} from 'react'
+import React,{useContext} from 'react'
 
-import UserProvider, { User } from "../../context"
+import UserProvider from "../../context"
 
 
 const Profile: React.FC = () => {
     const {state} = useContext(UserProvider);
-    const [UserData,setUserData] = useState<User>()
-
-
-    useEffect(() => {
-
-        fetch(`https://api.github.com/users/${state.userLogin}`)
-        .then(res => res.json())
-        .then(data => {
-            setUserData(data)
-            console.log("i ran once")
-        })
-
-    },[])
+    const UserData = state.userInfo;
 
 
     const updateState = () =>{
         console.log(state);
     
-      }
+     }
 
 
 
@@ -32,9 +20,9 @@ const Profile: React.FC = () => {
             <div className="profile-content">
                 <div className="profile-title">
                     <div className="user-picture">
-                        <img src={UserData?.avatar_url} alt="Alt"></img>
-                        <p>{UserData?.login}</p>
-                        <p>{state.userLogin}</p>
+                        <img src={UserData.avatar_url} alt="Alt"></img>
+                        <p>{UserData.login}</p>
+             
                         <button onClick={updateState}>State Changer Test</button>
                     </div>
                     <div className="user-info">
