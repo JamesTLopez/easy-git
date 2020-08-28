@@ -8,7 +8,7 @@ body,
   overflow-x: hidden;
   scrollbar-width: none;
   position: absolute;
-  font-family: 'PT Serif Caption', serif;
+  font-family: "PT Serif Caption", serif;
 }
 
 html .navbar-container,
@@ -134,7 +134,7 @@ body .navbar-container .navbar-content .nav-area nav ul li .search-form,
 #root .navbar-container .navbar-content .nav-area nav ul li .search-form,
 .App .navbar-container .navbar-content .nav-area nav ul li .search-form {
   position: relative;
-  width: 100%;
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,6 +166,14 @@ body .navbar-container .navbar-content .nav-area nav ul li .search-form form inp
   border-radius: 10px;
   border: solid #f1eadd;
   outline: none;
+}
+
+html .navbar-container .navbar-content .nav-area nav ul li .search-form form button,
+body .navbar-container .navbar-content .nav-area nav ul li .search-form form button,
+#root .navbar-container .navbar-content .nav-area nav ul li .search-form form button,
+.App .navbar-container .navbar-content .nav-area nav ul li .search-form form button {
+  position: absolute;
+  left: -9999px;
 }
 
 html .footer-container,
@@ -215,7 +223,7 @@ body .search-container,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #FDFAF5;
+  background: #fdfaf5;
 }
 
 html .search-container .search-content,
@@ -332,6 +340,8 @@ html .search-container .search-content .area .search-form form button,
 body .search-container .search-content .area .search-form form button,
 #root .search-container .search-content .area .search-form form button,
 .App .search-container .search-content .area .search-form form button {
+  position: absolute;
+  left: -9999px;
   margin: 10px;
   height: 35px;
   width: 90px;
@@ -422,8 +432,67 @@ body .profile-container .profile-content .profile-title .user-info,
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 50px;
-  height: 220px;
+  padding-top: 10px;
+  min-height: 100%;
   width: 400px;
+}
+
+html .profile-container .profile-content .profile-title .user-info .list,
+body .profile-container .profile-content .profile-title .user-info .list,
+#root .profile-container .profile-content .profile-title .user-info .list,
+.App .profile-container .profile-content .profile-title .user-info .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+html .profile-container .profile-content .profile-title .user-info .list .row-1,
+html .profile-container .profile-content .profile-title .user-info .list .row-2,
+body .profile-container .profile-content .profile-title .user-info .list .row-1,
+body .profile-container .profile-content .profile-title .user-info .list .row-2,
+#root .profile-container .profile-content .profile-title .user-info .list .row-1,
+#root .profile-container .profile-content .profile-title .user-info .list .row-2,
+.App .profile-container .profile-content .profile-title .user-info .list .row-1,
+.App .profile-container .profile-content .profile-title .user-info .list .row-2 {
+  width: 100%;
+}
+
+html .profile-container .profile-content .profile-title .user-info .list .row-1 .item,
+html .profile-container .profile-content .profile-title .user-info .list .row-2 .item,
+body .profile-container .profile-content .profile-title .user-info .list .row-1 .item,
+body .profile-container .profile-content .profile-title .user-info .list .row-2 .item,
+#root .profile-container .profile-content .profile-title .user-info .list .row-1 .item,
+#root .profile-container .profile-content .profile-title .user-info .list .row-2 .item,
+.App .profile-container .profile-content .profile-title .user-info .list .row-1 .item,
+.App .profile-container .profile-content .profile-title .user-info .list .row-2 .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  padding: 2px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px solid #afafaf73;
+  width: 93%;
+  font-size: 12px;
+}
+
+html .profile-container .profile-content .profile-title .user-info .list .row-1 .item p,
+html .profile-container .profile-content .profile-title .user-info .list .row-2 .item p,
+body .profile-container .profile-content .profile-title .user-info .list .row-1 .item p,
+body .profile-container .profile-content .profile-title .user-info .list .row-2 .item p,
+#root .profile-container .profile-content .profile-title .user-info .list .row-1 .item p,
+#root .profile-container .profile-content .profile-title .user-info .list .row-2 .item p,
+.App .profile-container .profile-content .profile-title .user-info .list .row-1 .item p,
+.App .profile-container .profile-content .profile-title .user-info .list .row-2 .item p {
+  margin: 0;
+  margin-left: 10px;
 }
 
 html .profile-container .profile-content .profile-repos,
@@ -436,6 +505,7 @@ body .profile-container .profile-content .profile-repos,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 50px;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -451,6 +521,9 @@ body .profile-container .profile-content .profile-repos .repository-list,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: inherit;
 }
@@ -475,10 +548,44 @@ body .card,
   height: 100px;
 }
 
-html .card p,
-body .card p,
-#root .card p,
-.App .card p {
-  font-size: 20px;
+html .card .card-container,
+body .card .card-container,
+#root .card .card-container,
+.App .card .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .card .card-container .image-area img,
+body .card .card-container .image-area img,
+#root .card .card-container .image-area img,
+.App .card .card-container .image-area img {
+  height: 50px;
+  width: 50px;
+  margin-right: 40px;
+}
+
+html .card .card-container .info-area,
+body .card .card-container .info-area,
+#root .card .card-container .info-area,
+.App .card .card-container .info-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html .card .card-container .info-area label,
+body .card .card-container .info-area label,
+#root .card .card-container .info-area label,
+.App .card .card-container .info-area label {
+  font-size: 10px;
 }
 /*# sourceMappingURL=App.css.map */
