@@ -1,16 +1,19 @@
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import UserProvider from '../../context'
-
+import Notify,{notify} from '../layouts/notify'
 
 export interface Isearch {
   login?: string;
 }
 
+
+
 const Search: React.FC = () => {
 
   const history = useHistory();
   const [login, setLogin] = useState<Isearch>({ login: '' });
+  let [found,updateFound] = useState<notify>({isFound:false});
   const { dispatch } = useContext(UserProvider);
 
 
@@ -37,26 +40,30 @@ const Search: React.FC = () => {
             dispatch({ type: 'UPDATE_REPOS', payload: repos });
           })
         history.push("/profile")
-      }).then(
-        
-      ).catch((error) => {
-
+      }).catch((error) => {
+        onNotFound()
         console.log(error)
       })
     e.preventDefault();
 
   }
 
-
+  const onNotFound = () => {
+    updateFound({isFound:true})
+    setTimeout( () => {
+      updateFound({isFound:false})
+    }, 3000);
+    
+  }
 
   return (
     <div className="search-container" >
+        
       <div className="search-content">
         <div className="area">
           <div className="title">
             <div className="logo">
               <p>EASY-GIT</p>
-
             </div>
             <div className="description">
               <p>Displays users repository with easy visibility</p>
@@ -66,12 +73,14 @@ const Search: React.FC = () => {
             <form onSubmit={(e) => submitForm(e)}>
               <input type="text" onChange={handleChange} placeholder="Search.." />
               <button type="submit">Search</button>
+              {found.isFound ? <Notify/> : null}
             </form>
 
 
           </div>
         </div>
       </div>
+    
     </div>
   );
 };

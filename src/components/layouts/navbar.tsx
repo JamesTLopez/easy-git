@@ -2,17 +2,28 @@ import React, { useState, useContext } from "react";
 import { Link ,useHistory} from "react-router-dom";
 import { Isearch } from "../pages/Search"
 import UserProvider from "../../context"
+import Notify,{notify} from '../layouts/notify'
+
 
 
 const Navbar: React.FC = () => {
   const [login, setLogin] = useState<Isearch>({ login: '' });
   const { dispatch } = useContext(UserProvider);
+  let [found,updateFound] = useState<notify>({isFound:false});
   const history = useHistory();
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLogin({ login: e.target.value });
 
+  }
+
+  const onNotFound = () => {
+    updateFound({isFound:true})
+    setTimeout( () => {
+      updateFound({isFound:false})
+    }, 3000);
+    
   }
 
   const submitForm = (e: any) => {
@@ -34,10 +45,8 @@ const Navbar: React.FC = () => {
             dispatch({ type: 'UPDATE_REPOS', payload: repos });
           })
         history.push("/profile")
-      }).then(
-        
-      ).catch((error) => {
-
+      }).catch((error) => {
+        onNotFound()
         console.log(error)
       })
     e.preventDefault();
@@ -61,6 +70,7 @@ const Navbar: React.FC = () => {
                   <form onSubmit={(e) => submitForm(e)}>
                     <input type="text" onChange={handleChange} placeholder="Search.." />
                     <button type="submit">Search</button>
+                    {found.isFound ? <Notify/> : null}
                   </form>
                 </div>
               </li>       

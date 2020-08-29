@@ -4,17 +4,11 @@ import UserProvider from "../../context"
 import Card from "../layouts/card"
 
 
+
 const Profile: React.FC = () => {
     const { state } = useContext(UserProvider);
     const UserData = state.userInfo;
     const UserRepo = state.userRepos;
-
-
-    const updateState = () => {
-        console.log(UserRepo[0])
-    }
-
-
 
     return (
         <div className="profile-container">
@@ -22,9 +16,7 @@ const Profile: React.FC = () => {
                 <div className="profile-title">
                     <div className="user-picture">
                         <img src={UserData.avatar_url} alt="Alt"></img>
-                        <p>{UserData.login}</p>
-
-                        <button onClick={updateState}>State Changer Test</button>
+                        <p>{UserData.name}</p>
                     </div>
                     <div className="user-info">
                         <div className="list">
@@ -74,8 +66,6 @@ const Profile: React.FC = () => {
                             // <h3 key={repo.id}>{repo.name}</h3>
                             <Card key={repo.id} id={repo.id} name={repo.name} owner_url={repo.owner.avatar_url} html_url={repo.html_url} owner_name={repo.owner.login}/>
                         ))) : <h2>No repository to be displayed</h2>}
-
-
 
                     </div>
                 </div>

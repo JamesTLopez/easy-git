@@ -15,6 +15,7 @@ html .navbar-container,
 body .navbar-container,
 #root .navbar-container,
 .App .navbar-container {
+  z-index: 10000;
   position: relative;
   height: 100px;
   min-height: 100px;
@@ -389,6 +390,8 @@ body .profile-container .profile-content .profile-title,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -479,7 +482,7 @@ body .profile-container .profile-content .profile-title .user-info .list .row-2 
       -ms-flex-direction: row;
           flex-direction: row;
   border-bottom: 1px solid #afafaf73;
-  width: 93%;
+  width: 85%;
   font-size: 12px;
 }
 
@@ -528,10 +531,19 @@ body .profile-container .profile-content .profile-repos .repository-list,
   height: inherit;
 }
 
-html .card,
-body .card,
-#root .card,
-.App .card {
+html .container-card a,
+body .container-card a,
+#root .container-card a,
+.App .container-card a {
+  text-decoration: none;
+  color: black;
+  background-color: #ffffff;
+}
+
+html .container-card a .card,
+body .container-card a .card,
+#root .container-card a .card,
+.App .container-card a .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,17 +553,43 @@ body .card,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 15px;
   border: solid 1px #8080804b;
   border-radius: 5px;
+  margin: 4px;
   width: 250px;
   height: 100px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-html .card .card-container,
-body .card .card-container,
-#root .card .card-container,
-.App .card .card-container {
+html .container-card a .card:hover,
+body .container-card a .card:hover,
+#root .container-card a .card:hover,
+.App .container-card a .card:hover {
+  width: 255px;
+  height: 105px;
+  background-color: #fcc1c1;
+}
+
+html .container-card a .card:hover .card-container .image-area img,
+body .container-card a .card:hover .card-container .image-area img,
+#root .container-card a .card:hover .card-container .image-area img,
+.App .container-card a .card:hover .card-container .image-area img {
+  height: 60px;
+  width: 60px;
+}
+
+html .container-card a .card:hover .card-container .info-area label,
+body .container-card a .card:hover .card-container .info-area label,
+#root .container-card a .card:hover .card-container .info-area label,
+.App .container-card a .card:hover .card-container .info-area label {
+  font-size: 15px;
+}
+
+html .container-card a .card .card-container,
+body .container-card a .card .card-container,
+#root .container-card a .card .card-container,
+.App .container-card a .card .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,19 +598,21 @@ body .card .card-container,
           align-items: center;
 }
 
-html .card .card-container .image-area img,
-body .card .card-container .image-area img,
-#root .card .card-container .image-area img,
-.App .card .card-container .image-area img {
+html .container-card a .card .card-container .image-area img,
+body .container-card a .card .card-container .image-area img,
+#root .container-card a .card .card-container .image-area img,
+.App .container-card a .card .card-container .image-area img {
   height: 50px;
   width: 50px;
   margin-right: 40px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-html .card .card-container .info-area,
-body .card .card-container .info-area,
-#root .card .card-container .info-area,
-.App .card .card-container .info-area {
+html .container-card a .card .card-container .info-area,
+body .container-card a .card .card-container .info-area,
+#root .container-card a .card .card-container .info-area,
+.App .container-card a .card .card-container .info-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,10 +622,105 @@ body .card .card-container .info-area,
           flex-direction: column;
 }
 
-html .card .card-container .info-area label,
-body .card .card-container .info-area label,
-#root .card .card-container .info-area label,
-.App .card .card-container .info-area label {
+html .container-card a .card .card-container .info-area label,
+body .container-card a .card .card-container .info-area label,
+#root .container-card a .card .card-container .info-area label,
+.App .container-card a .card .card-container .info-area label {
   font-size: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+html .notify,
+body .notify,
+#root .notify,
+.App .notify {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  background-color: #f3debc;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 2px 2px 10px #464435a8;
+          box-shadow: 2px 2px 10px #464435a8;
+}
+
+html .notify .notify-container,
+body .notify .notify-container,
+#root .notify .notify-container,
+.App .notify .notify-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .notify .notify-container p,
+body .notify .notify-container p,
+#root .notify .notify-container p,
+.App .notify .notify-container p {
+  color: black;
+  margin: 5px;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.1;
+    top: -70px;
+  }
+  25% {
+    opacity: 1;
+    top: 50px;
+  }
+  70% {
+    opacity: 1;
+    top: 50px;
+  }
+  90% {
+    opacity: 1;
+    top: 50px;
+  }
+  100% {
+    opacity: 0;
+    top: -5px;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.1;
+    top: -70px;
+  }
+  25% {
+    opacity: 1;
+    top: 50px;
+  }
+  70% {
+    opacity: 1;
+    top: 50px;
+  }
+  90% {
+    opacity: 1;
+    top: 50px;
+  }
+  100% {
+    opacity: 0;
+    top: -5px;
+  }
 }
 /*# sourceMappingURL=App.css.map */
