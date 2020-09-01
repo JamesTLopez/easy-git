@@ -723,4 +723,120 @@ body .notify .notify-container p,
     top: -5px;
   }
 }
+
+html .about-container,
+body .about-container,
+#root .about-container,
+.App .about-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+html .about-container .about-content,
+body .about-container .about-content,
+#root .about-container .about-content,
+.App .about-container .about-content {
+  position: relative;
+  top: -10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+html .about-container .about-content .title p,
+body .about-container .about-content .title p,
+#root .about-container .about-content .title p,
+.App .about-container .about-content .title p {
+  font-size: 50px;
+}
+
+html .about-container .about-content .content,
+body .about-container .about-content .content,
+#root .about-container .about-content .content,
+.App .about-container .about-content .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .about-container .about-content .content .description p,
+body .about-container .about-content .content .description p,
+#root .about-container .about-content .content .description p,
+.App .about-container .about-content .content .description p {
+  font-size: 20px;
+}
+
+html .about-container .about-content .content .sub-title,
+body .about-container .about-content .content .sub-title,
+#root .about-container .about-content .content .sub-title,
+.App .about-container .about-content .content .sub-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .about-container .about-content .content .sub-title .tech,
+body .about-container .about-content .content .sub-title .tech,
+#root .about-container .about-content .content .sub-title .tech,
+.App .about-container .about-content .content .sub-title .tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .about-container .about-content .content .sub-title .tech p,
+body .about-container .about-content .content .sub-title .tech p,
+#root .about-container .about-content .content .sub-title .tech p,
+.App .about-container .about-content .content .sub-title .tech p {
+  font-size: 25px;
+  color: #585858;
+}
+
+html .about-container .about-content .content .sub-title .tech ul,
+body .about-container .about-content .content .sub-title .tech ul,
+#root .about-container .about-content .content .sub-title .tech ul,
+.App .about-container .about-content .content .sub-title .tech ul {
+  padding: 0;
+  margin: 0;
+}
 /*# sourceMappingURL=App.css.map */

@@ -384,5 +384,62 @@ body,
         }
      }
   }
+
+  //ABOUT PAGE 
+  .about-container{
+    position: relative;
+    display: flex;
+    height: 100%;
+    .about-content{
+      position: relative;
+      top:-10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      .title{
+        p{
+          font-size:50px;
+        }
+
+      }
+      .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .description{
+          p{
+            font-size:20px;
+          }
+        }
+        .sub-title{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-top:50px;
+          align-items: center;
+        
+          .tech{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p{
+              font-size:25px;
+              color:#585858;
+            }
+            ul{
+              padding:0;
+              margin:0;
+            }
+
+          }
+        }
+
+      }
+
+    }
+  }
   
 }

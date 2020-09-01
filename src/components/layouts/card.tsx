@@ -17,7 +17,7 @@ const Card: React.FC<Props> = ({
 }) => {
   return (
     <div className="container-card">
-      <a href={html_url}>
+      <a href={html_url} target="_blank">
         <div key={id} className="card">
           <div className="card-container">
             <div className="image-area">

@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
     <header className="navbar-container">
       <div className="navbar-content">
         <div className="logo">
-          <Link to="/"><h1>Easy-Git</h1></Link>
+          <Link to="/easy-git"><h1>Easy-Git</h1></Link>
         </div>
         <div className="nav-area">
           <nav>

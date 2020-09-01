@@ -5,6 +5,7 @@ import Nav from "./components/layouts/navbar";
 import Footer from "./components/layouts/footerNav";
 import Search from "./components/pages/Search";
 import Profile from "./components/pages/Profile";
+import About from "./components/pages/About"
 
 import "./App.css";
 
@@ -22,11 +23,14 @@ const App: React.FC = () => {
         <div className="App">
           <Nav />
           <Switch>
-            <Route exact path={`/`}>
+            <Route exact path={`/easy-git`}>
               <Search/>
             </Route>
             <Route path={`/profile`}>
               <Profile />
+            </Route>
+            <Route path={`/about`}>
+              <About />
             </Route>
           </Switch>
           <Footer />
