@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "33eaae2025b7c54b31a42665ad022282",
+    "revision": "e1199880348a8370cd6344fbb5731b74",
     "url": "/easy-git/index.html"
   },
   {
-    "revision": "9f034ec28c2deacefc3e",
-    "url": "/easy-git/static/css/main.b328cd5d.chunk.css"
+    "revision": "0fe6c9e8c28785271ebc",
+    "url": "/easy-git/static/css/main.58a7eb67.chunk.css"
   },
   {
     "revision": "6b5910f241d2e2bd8a77",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/easy-git/static/js/2.5bdfff60.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9f034ec28c2deacefc3e",
-    "url": "/easy-git/static/js/main.8816e853.chunk.js"
+    "revision": "0fe6c9e8c28785271ebc",
+    "url": "/easy-git/static/js/main.05bccd5c.chunk.js"
   },
   {
     "revision": "41698606e9f1d709aa9f",
