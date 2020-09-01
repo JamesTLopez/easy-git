@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/easy-git/static/css/main.b328cd5d.chunk.css",
+    "main.js": "/easy-git/static/js/main.8816e853.chunk.js",
+    "main.js.map": "/easy-git/static/js/main.8816e853.chunk.js.map",
+    "runtime-main.js": "/easy-git/static/js/runtime-main.6be1eb73.js",
+    "runtime-main.js.map": "/easy-git/static/js/runtime-main.6be1eb73.js.map",
+    "static/js/2.5bdfff60.chunk.js": "/easy-git/static/js/2.5bdfff60.chunk.js",
+    "static/js/2.5bdfff60.chunk.js.map": "/easy-git/static/js/2.5bdfff60.chunk.js.map",
+    "index.html": "/easy-git/index.html",
+    "precache-manifest.8ac6f2afa8248526d9bc2a48c866191b.js": "/easy-git/precache-manifest.8ac6f2afa8248526d9bc2a48c866191b.js",
+    "service-worker.js": "/easy-git/service-worker.js",
+    "static/css/main.b328cd5d.chunk.css.map": "/easy-git/static/css/main.b328cd5d.chunk.css.map",
+    "static/js/2.5bdfff60.chunk.js.LICENSE.txt": "/easy-git/static/js/2.5bdfff60.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6be1eb73.js",
+    "static/js/2.5bdfff60.chunk.js",
+    "static/css/main.b328cd5d.chunk.css",
+    "static/js/main.8816e853.chunk.js"
+  ]
+}
